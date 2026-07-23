@@ -1,4 +1,4 @@
-# 🧭 Meridian — Business Suite full-stack
+# Meridian — Business Suite full-stack
 
 ERP + CRM + POS **full-stack real**: backend Node.js con API REST y autenticación JWT + frontend SPA conectado. **Cero dependencias**: no hay `npm install`, todo está construido sobre los módulos nativos de Node (http, crypto, fs). Eso significa deploy instantáneo y ninguna vulnerabilidad de terceros.
 
