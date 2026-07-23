@@ -54,27 +54,6 @@ curl -s localhost:3000/api/products -H "Authorization: Bearer $TOKEN"
 curl -s -X POST localhost:3000/api/sales -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
   -d '{"customerId":"cf","method":"efectivo","lines":[{"productId":"<ID>","qty":2}]}'
 ```
-
-## Deploy en Render (Web Service, NO static site)
-
-1. Subí la carpeta a un repo de GitHub.
-2. En Render: **New → Web Service** → conectá el repo.
-3. Runtime **Node** · Build command: *(vacío)* · Start command: `node server.js`.
-4. (Opcional) Environment → agregá `JWT_SECRET` con un valor largo aleatorio.
-
-O directamente usá el `render.yaml` incluido (New → Blueprint).
-
-> ⚠️ **Disco efímero en el plan free**: los datos se guardan en `data/meridian.json`; en cada redeploy o reinicio Render resetea el disco y la demo vuelve a sembrarse sola. Para persistencia real: un Render Disk (plan pago) apuntando `DATA_DIR` al mount, o migrar el store a PostgreSQL.
-
-## Variables de entorno
-
-| Variable | Default | Descripción |
-|---|---|---|
-| `PORT` | `3000` | Puerto HTTP (Render la setea sola) |
-| `JWT_SECRET` | valor demo | Secreto de firma de tokens — cambiala en producción |
-| `TOKEN_TTL` | `43200` | Vida del token en segundos (12 h) |
-| `DATA_DIR` | `./data` | Dónde persiste el store JSON |
-
 ## Licencia
 
 MIT — hecho como proyecto demostrativo de arquitectura full-stack sin dependencias.
