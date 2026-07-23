@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERIDIAN — Business Suite</title>
+<meta name="description" content="Meridian: ERP + CRM + POS full-stack. API REST con autenticación JWT, contabilidad de partida doble y punto de venta.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a0a0b'/%3E%3Crect x='30' y='30' width='40' height='40' rx='6' fill='%23d7fd35'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div id="login" class="login-wrap" style="display:none">
+	<form id="login-form" class="login-card">
+		<div class="login-brand">Meridian</div>
+		<div class="login-sub">ERP / CRM / POS — Business Suite</div>
+		<div id="login-error" class="login-error" style="display:none"></div>
+		<div class="f"><label>Email</label><input id="login-email" type="email" value="admin@meridian.app" autocomplete="username" required></div>
+		<div class="f"><label>Contraseña</label><input id="login-password" type="password" value="admin123" autocomplete="current-password" required></div>
+		<button class="btn" id="login-btn" type="submit">Ingresar</button>
+		<div class="login-note">Usuarios demo: <code>admin@meridian.app / admin123</code> · <code>caja@meridian.app / caja123</code></div>
+	</form>
+</div>
+
+<div id="shell" class="shell" style="display:none">
+	<aside class="sidebar">
+		<div class="brand"><span>Meridian</span></div>
+		<nav id="nav"></nav>
+		<div class="side-foot">API REST · JWT<br>Partida doble · SSE</div>
+	</aside>
+	<main class="main">
+		<div class="ticker"><span>ERP <b>/</b> CRM <b>/</b> POS <b>/</b> Contabilidad de partida doble <b>/</b> Inventario en tiempo real <b>/</b> Facturación IVA 21% <b>/</b> Tesorería <b>/</b> Compras <b>/</b> Auditoría <b>/</b> Eventos en vivo <b>/</b>  ERP <b>/</b> CRM <b>/</b> POS <b>/</b> Contabilidad de partida doble <b>/</b> Inventario en tiempo real <b>/</b> Facturación IVA 21% <b>/</b> Tesorería <b>/</b> Compras <b>/</b> Auditoría <b>/</b> Eventos en vivo <b>/</b> </span></div>
+		<header class="topbar">
+			<h1 id="page-title"></h1>
+			<div class="topbar-right">
+				<span class="user-chip"><span id="user-name"></span></span>
+				<button class="btn ghost small" id="btn-logout">Salir</button>
+			</div>
+		</header>
+		<div id="view" class="view"></div>
+	</main>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root"></div>
+<script src="js/api.js"></script>
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/biz.js"></script>
+<script src="js/live.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/modules/dashboard.js"></script>
+<script src="js/modules/crm.js"></script>
+<script src="js/modules/sales.js"></script>
+<script src="js/modules/pos.js"></script>
+<script src="js/modules/inventory.js"></script>
+<script src="js/modules/invoices.js"></script>
+<script src="js/modules/customers.js"></script>
+<script src="js/modules/accounting.js"></script>
+<script src="js/modules/purchases.js"></script>
+<script src="js/modules/treasury.js"></script>
+<script src="js/modules/reports.js"></script>
+<script src="js/modules/audit.js"></script>
+</body>
+</html>

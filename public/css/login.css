@@ -1,0 +1,56 @@
+.shell{display:flex;width:100%;min-height:100vh}
+
+.login-wrap{
+	position:fixed;inset:0;z-index:50;
+	display:flex;align-items:center;justify-content:center;
+	background:var(--bg);
+	overflow:hidden;padding:20px;
+}
+.login-wrap::before{
+	content:"";position:absolute;inset:0;
+	background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+	background-size:72px 72px;
+	mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,black 0%,transparent 70%);
+	-webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,black 0%,transparent 70%);
+	opacity:.5;
+}
+.login-wrap::after{
+	content:"ERP / CRM / POS / CONTABILIDAD / INVENTARIO / TESORERIA / COMPRAS / REPORTES / AUDITORIA /";
+	position:absolute;bottom:26px;left:0;right:0;
+	font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:#3c3c42;
+	text-align:center;text-transform:uppercase;white-space:nowrap;overflow:hidden;
+}
+
+.login-card{
+	position:relative;z-index:2;
+	width:100%;max-width:420px;
+	background:transparent;border:none;padding:0;
+}
+.login-brand{
+	font-size:clamp(52px,9vw,84px);
+	font-weight:700;letter-spacing:-.05em;line-height:.95;
+	color:var(--text);text-transform:uppercase;
+}
+.login-brand::after{content:".";color:var(--accent)}
+.login-sub{
+	font-family:var(--mono);font-size:11px;letter-spacing:.28em;
+	color:var(--muted);text-transform:uppercase;
+	margin:14px 0 40px;
+}
+.login-card .f label{color:var(--muted)}
+.login-card .f input{background:var(--panel);border-color:var(--border-hi)}
+.login-card .f input:focus{border-color:var(--accent)}
+.login-card .btn{width:100%;margin-top:10px;padding:14px;font-size:14px}
+.login-error{
+	background:var(--err-soft);border:1px solid rgba(255,107,107,.4);color:var(--err);
+	border-radius:10px;padding:10px 12px;
+	font-family:var(--mono);font-size:12px;margin-bottom:14px;
+}
+.login-note{
+	margin-top:26px;font-family:var(--mono);font-size:10.5px;line-height:2;
+	color:#55555d;letter-spacing:.04em;
+}
+.login-note code{
+	background:var(--panel);border:1px solid var(--border);
+	padding:2px 7px;border-radius:5px;color:var(--muted);
+}

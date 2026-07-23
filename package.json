@@ -1,0 +1,14 @@
+{
+	"name": "meridian",
+	"version": "1.0.0",
+	"description": "Meridian — Business Suite full-stack: API REST + SPA, cero dependencias externas",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"test": "node --test"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"license": "MIT"
+}

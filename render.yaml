@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: meridian
+    runtime: node
+    plan: free
+    buildCommand: "echo 'Sin build: cero dependencias'"
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
